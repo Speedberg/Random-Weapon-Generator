@@ -1,2 +1,2 @@
-# Randon-Weapon-Generator
-A randomised weapon generatir created using JavaScript, Html abd CSS.
+# Randonised Weapon Generator
+A randomised weapon generator created using JavaScript, HTML and CSS.
