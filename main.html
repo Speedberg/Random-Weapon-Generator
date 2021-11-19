@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+ <html>
+  <head>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+   <link type="text/css" rel="stylesheet" href="styles/main.css">
+   <link href="https://fonts.googleapis.com/css?family=MedievalSharp&display=swap" rel="stylesheet"> 
+   <title>Random Weapon Generator</title>
+   <script>
+   var modifierNames = ["empty modifier", "empty modifier", "empty modifier"];
+   var modifierFileType = ["Test1"];
+   </script>
+   <script src="scripts/main.js"></script>
+   <h1>Random Weapon Generator</h1>
+  </head>
+<div class="body-opacity">
+  <body>
+     <div id="nav">
+   <img id="nav-inv" class="button" src="images/Icons/inventory.png" onclick="navInv()">
+   <img id="nav-knight" class="button" src="images/Icons/knight.png" onclick="navKnight()">
+   <img id="nav-archer" class="button" src="images/Icons/archer.png" onclick="navArcher()">
+   <img id="nav-mage" class="button" src="images/Icons/mage.png" onclick="navMage()">
+  </div>
+  
+  <div id="div-inv">
+<div style="text-align: center;">
+<img id="invTable1" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(1)">
+<img id="invTable2" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(2)">
+<img id="invTable3" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(3)">
+<img id="invTable4" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(4)">
+<img id="invTable5" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(5)">
+<img id="invTable6" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(6)">
+<img id="invTable7" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(7)">
+<img id="invTable8" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(8)">
+<img id="invTable9" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(9)">
+<img id="invTable10" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(10)">
+<img id="invTable11" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(11)">
+<img id="invTable12" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(12)">
+<img id="invTable13" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(13)">
+<img id="invTable14" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(14)">
+<img id="invTable15" class="button invSlot" src="images/Icons/unknown.png" onclick="invClick(15)">
+
+<div id="div-inv-toolbar">
+<img id="invToolClear" class="button" src="images/Icons/clearinv.png" onclick="invClear()">
+</div>
+     <div id="div-inv-info">
+    <div id="div-inv-image" style="text-align:center; padding-top: 10px;">
+      <img id="inv-image" src="images/Icons/unknown.png"/>
+    </div>
+    <div id="div-inv-name" style="text-align:center;"> 
+       <span id="inv-name" class="weapon-name">Unknown</span>
+    </div>
+     <div id="div-inv-stats" style="text-align:center";>
+       <h2>Stats</h2>
+       <ul style="list-type: none;">
+        <li><span id="inv-stat1" class="weapon-stats">Damage: 0</span></li>
+       
+        <li><span id="inv-stat2" class="weapon-stats">Accuracy: 0</span></li>
+        
+        <li><span id="inv-stat3" class="weapon-stats">Critical Chance: 0</span></li>
+
+        <li><span id="inv-stat4" class="weapon-stats">Piercing: 0</span></li> 
+       </ul>
+     </div>
+     <div id="div-inv-modifiers" style="text-align:center;">
+        
+     <h2>Modifiers</h2>   
+       <ul>
+	<li>
+            <img class="button" id="inv-modifier-1" src="images/Modifiers/empty modifier.png" onclick="invMod1()">
+            <img class="button" id="inv-modifier-2" src="images/Modifiers/empty modifier.png" onclick="invMod2()">
+            <img class="button" id="inv-modifier-3" src="images/Modifiers/empty modifier.png" onclick="invMod3()"></li>
+       </ul>
+     </div>
+     <div id="inv-div-modifiers-tooltip" style="text-align:center;">
+      <h3 id="inv-modifier-tooltip-name">Click on a modifier for it's tooltip!</h3>
+      <p id="inv-modifier-tooltip" style="text-align:center;"></p>
+     </div>
+</div>
+</div>
+</div>
+<br>
+<br>
+  </div>  
+
+  <div id="div-knight">
+         <div style="text-align:center;">
+       <img id="meleeRandButton" class="button" src="images/Icons/random.png" onclick="randKnightWeapon()">
+       <img id="addToInvButton" class="button" src="images/Icons/addtoinv.png" onclick="meleeAddToInv()">
+      </div>
+    <div id="div-image" style="text-align:center;">
+      <img id="weapon-type" src="images/Icons/unknown.png"/>
+    </div>
+    <div id="div-name" style="text-align:center;"> 
+       <span id="weapon-name" class="weapon-name">Unknown</span>
+    </div>
+     <div id="div-stats" style="text-align:center";>
+       <h2>Stats</h2>
+       <ul style="list-type: none;">
+        <li><span id="weapon-damage" class="weapon-stats">Damage: 0</span></li>
+       
+        <li><span id="weapon-accuracy" class="weapon-stats">Accuracy: 0</span></li>
+        
+        <li><span id="weapon-crit" class="weapon-stats">Critical Chance: 0</span></li>
+
+        <li><span id="weapon-pierce" class="weapon-stats">Piercing: 0</span></li> 
+       </ul>
+     </div>
+     <div id="div-modifiers" style="text-align:center;">
+        
+     <h2>Modifiers</h2>   
+       <ul>
+	<li><img style="text-align: center;" class="button" id="modifier-1" src="images/Modifiers/empty modifier.png" onclick="modifier1tooltip()">
+            <img class="button" id="modifier-2" src="images/Modifiers/empty modifier.png" onclick="modifier2tooltip()">
+            <img class="button" id="modifier-3" src="images/Modifiers/empty modifier.png" onclick="modifier3tooltip()">
+        </li>
+       </ul>
+     </div>
+     <div id="div-modifiers-tooltip" style="text-align:center;">
+      <h3 id="modifier-tooltip-name">Click on a modifier for it's tooltip!</h3>
+      <p id="modifier-tooltip" style="text-align:center;"></p>
+     </div>
+</div>
+
+<div id="div-archer">
+         <div style="text-align:center;">
+       <img class="button" src="images/Icons/random.png" onclick="randArcherWeapon()">
+      </div>
+    <div id="div-image" style="text-align:center;">
+      <img id="ranged-type" src="images/ranged/Mystic/crossbow.png"/>
+    </div>
+    <div id="div-name" style="text-align:center;"> 
+       <span id="ranged-name" class="weapon-name">Mystic Crossbow</span>
+    </div>
+     <div id="div-stats" style="text-align:center";>
+       <h2>Stats</h2>
+       <ul style="list-type: none;">
+        <li><span id="ranged-damage" class="weapon-stats">Damage: 0</span></li>
+       
+        <li><span id="ranged-accuracy" class="weapon-stats">Accuracy: 0</span></li>
+        
+        <li><span id="ranged-crit" class="weapon-stats">Critical Chance: 0</span></li>
+
+        <li><span id="ranged-pierce" class="weapon-stats">Piercing: 0</span></li> 
+       </ul>
+     </div>
+     <div id="div-modifiers" style="text-align:center;">
+        
+     <h2>Modifiers</h2>   
+       <ul>
+	<li><img style="text-align: center;" class="button" id="ranged-modifier-1" src="images/Modifiers/empty modifier.png" onclick="rangedmodifier1tooltip()"><img class="button" id="ranged-modifier-2" src="images/Modifiers/empty modifier.png" onclick="rangedmodifier2tooltip()"><img class="button" id="ranged-modifier-3" src="images/Modifiers/empty modifier.png" onclick="rangedmodifier3tooltip()"></li>
+       </ul>
+     </div>
+     <div id="div-modifiers-tooltip" style="text-align:center;">
+      <h3 id="ranged-modifier-tooltip-name">Click on a modifier for it's tooltip!</h3>
+      <p id="ranged-modifier-tooltip" style="text-align:center;"></p>
+     </div>
+</div>
+     <script src="scripts/main.js"></script>
+  </body>
+</div>
+ </html>

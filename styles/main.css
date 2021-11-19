@@ -1,0 +1,200 @@
+html {
+background: #555555;
+
+font-family: 'MedievalSharp', cursive;
+
+background-image: url('../images/Backgrounds/stone.png');
+background-origin: content-box, content-box;
+background-position: center; 
+background-repeat: repeat; 
+}
+head {
+margin-left: auto;
+color: white;
+}
+#nav {
+text-align:center; 
+background: #BBBBBB;
+border-radius: 90px;
+padding-top: 10px;
+
+
+background-image: url('../images/Backgrounds/wood.png');
+background-origin: content-box, content-box;
+background-position: 0 0; 
+background-repeat: repeat; 
+}
+#div-inv-toolbar {
+text-align:center; 
+background: #BBBBBB;
+border-radius: 90px;
+padding-top: 10px;
+
+
+background-image: url('../images/Backgrounds/wood.png');
+background-origin: content-box, content-box;
+background-position: 0 0; 
+background-repeat: repeat; 
+}
+body {
+width: 80%;
+margin: auto;
+ background: #777777;
+ border-radius: 15px;
+color: white;
+}
+
+#div-knight {
+ display: none;
+}
+#div-archer {
+ display: none;
+}
+#div-inv {
+ display: none;
+}
+.button {
+text-align: center;
+font-size: 24px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: default;
+  
+-webkit-touch-callout: none; 
+
+-webkit-user-select: none;
+ 
+-khtml-user-select: none;
+ 
+-moz-user-select: none;
+ 
+-ms-user-select: none; 
+ 
+user-select: none;
+-webkit-tap-highlight-color: transparent; 
+}
+.button:active {
+  -webkit-transition-duration: 3s; /* Safari */
+  animation-duration: 3s;
+  -webkit-animation-name: btn;
+  animation-name: btn;
+}
+@keyframes btn {
+
+0% {filter: opacity(10%);}
+
+25% {filter: opacity(50%); }
+
+50% {filter: opacity(75%); }
+
+75% {filter: opacity(50%);}
+
+100% {filter: opacity(10%); }
+
+}
+
+@-webkit-frames btn {
+
+0% {filter: opacity(10%);}
+
+25% {filter: opacity(50%); }
+
+50% {filter: opacity(75%); }
+
+75% {filter: opacity(50%);}
+
+100% {filter: opacity(10%); }
+
+}
+
+.button:active:after {
+  
+-webkit-transition-duration: 0s; /* Safari */
+  animation-duration: 0s;
+  
+filter: none;
+
+}
+h1{
+text-align: center;   
+color: white;  
+text-shadow: 3px 3px #555551;    
+}
+.button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+ color: white;
+}
+ul li{
+ display: inline;
+}
+li {
+
+text-align: center;
+
+}
+.weapon-name {
+font-family: 'MedievalSharp', cursive;
+ font-size: 32px;
+color: white;
+text-shadow: 3px 3px #555551; 
+}
+h2 {
+/*padding-left: 40px;*/
+font-family: 'MedievalSharp', cursive;
+font-szie: 20px;
+color: white;
+text-shadow: 3px 3px #555551; 
+}
+.weapon-stats {
+font-family: 'MedievalSharp', cursive;
+font-szie: 17px;
+color: white;
+}
+#div-stats ul{
+ text-align: center;
+ list-style-type: none;
+ color: white;
+}
+ 
+#div-stats ul li {
+
+ display: block;
+ 
+color: white;
+ 
+}
+ 
+#div-inv-stats ul{
+ text-align: center;
+ list-style-type: none;
+ color: white;
+}
+ 
+#div-inv-stats ul li {
+color: white;
+ 
+}
+ 
+h3 {
+ 
+text-shadow: 3px 3px #555551; 
+ }
+ 
+#modifier-1, #modifier-2, #modifier-3, #ranged-modifier-1, #ranged-modifier-2, #ranged-modifier-3 {
+ 
+padding: 10px;
+ padding-top: 2px;
+ padding-bottom: 2px;
+ 
+}
+.invSlot {
+padding: 25px;
+}
