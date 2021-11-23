@@ -1,5 +1,5 @@
-# Randomised Weapon Generator
-A randomised weapon generator created using JavaScript, HTML and CSS.
+# Randomized Weapon Generator
+A randomized weapon generator created using JavaScript, HTML and CSS.
 
 Uploaded for archiving.
 
